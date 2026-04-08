@@ -23,10 +23,10 @@ class Configuration(BaseModel):
     # Additional fields for authenticating against an Azure-based deployment.
     # FIXME(moringenj): This set of fields is for a test version of the authentication flow. The final version will
     #                   probably be a bit different.
-    tenant_id: Optional[str] = Field(..., description="Tenant ID")
-    sp_client_id: Optional[str] = Field(..., description="SP client ID")
-    sp_client_secret: Optional[str] = Field(..., description="SP client secret")
-    apim_app_id: Optional[str] = Field(..., description="APIM App ID")
+    tenant_id: Optional[str] = Field(None, description="Tenant ID")
+    sp_client_id: Optional[str] = Field(None, description="SP client ID")
+    sp_client_secret: Optional[str] = Field(None, description="SP client secret")
+    apim_app_id: Optional[str] = Field(None, description="APIM App ID")
 
 
 class Hub:
